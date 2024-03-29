@@ -3,13 +3,13 @@
 #include <cmath>
 #include <random>
 
-static void convertBetweenFahrenheitAndCelsius();
-static void calculateAreaOfCircle();
-static void simulateDiceRoll(short numberOfThrows);
+static void ConvertBetweenFahrenheitAndCelsius();
+static void CalculateAreaOfCircle();
+static void SimulateDiceRoll(int numberOfThrows);
 
 int main()
 {
-	convertBetweenFahrenheitAndCelsius();
+	ConvertBetweenFahrenheitAndCelsius();
 	//calculateAreaOfCircle();
 	//simulateDiceRoll(10);
 	
@@ -17,7 +17,7 @@ int main()
 	return 0;
 }
 
-static void convertBetweenFahrenheitAndCelsius()
+static void ConvertBetweenFahrenheitAndCelsius()
 {
 	int currentTemperature = 0;
 	int temporaryFahrenheitToCelsius = 0;
@@ -59,7 +59,7 @@ static void convertBetweenFahrenheitAndCelsius()
 	std::cout << buffer.str() << std::endl;
 }
 
-static void calculateAreaOfCircle()
+static void CalculateAreaOfCircle()
 {
 	const float pi = 3.14159F; // Always remember 'F' at the end of a float.
 	double radiusOfCircle = 0;
@@ -70,14 +70,14 @@ static void calculateAreaOfCircle()
 	std::cout << "The area of the circle is: " << (pi * std::pow(radiusOfCircle, 2));
 }
 
-static void simulateDiceRoll(short numberOfThrows)
+static void SimulateDiceRoll(int numberOfThrows)
 {
 	std::random_device rd;
 	std::mt19937 gen(rd());
 
 	std::uniform_int_distribution<> dis(1, 6);
 
-	for (short i = 1; i <= numberOfThrows; i++)
+	for (int i = 1; i <= numberOfThrows; i++)
 	{
 		int randomNumber = dis(gen);
 
