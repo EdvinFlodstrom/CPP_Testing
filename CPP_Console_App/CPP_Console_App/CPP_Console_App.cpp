@@ -2,6 +2,7 @@
 #include <sstream>
 #include <cmath>
 #include <random>
+#include "Log.h"
 
 static void ConvertBetweenFahrenheitAndCelsius();
 static void CalculateAreaOfCircle();
@@ -9,11 +10,13 @@ static void SimulateDiceRoll(int numberOfThrows);
 
 int main()
 {
+	InitialLog();
+
 	ConvertBetweenFahrenheitAndCelsius();
-	//calculateAreaOfCircle();
-	//simulateDiceRoll(10);
+	//CalculateAreaOfCircle();
+	//SimulateDiceRoll(10);
 	
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max()).get();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n').get();
 	return 0;
 }
 
