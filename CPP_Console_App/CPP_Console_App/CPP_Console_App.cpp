@@ -9,10 +9,11 @@ static void simulateDiceRoll(short numberOfThrows);
 
 int main()
 {
-	//convertBetweenFahrenheitAndCelsius();
+	convertBetweenFahrenheitAndCelsius();
 	//calculateAreaOfCircle();
-	simulateDiceRoll(10);
+	//simulateDiceRoll(10);
 	
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max()).get();
 	return 0;
 }
 
