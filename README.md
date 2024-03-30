@@ -20,3 +20,9 @@ Got it working, just a few minutes later. Now, this is what the code looks like 
 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n').get();
 ```
 All that I needed to do was slap on a '\n' so that the program knows what to listen for. I assume that it currently ignores everything until a '\n' (a new line - when enter is pressed), at which point it stops ignoring the terminal inputs. Which gives me the desired effect of the program pausing until enter is pressed. As explained by a certain AI: '...the program will pause and discard all characters from the input buffer until it encounters a newline character (i.e., until the user presses enter)'. Nice.
+
+2024-03-30
+-----------
+I've worked a tad more with C++ so far today, and I added a buffer for the logging to make the logging more efficient. Better to log several messages at once than multiple messages individually. I also implemented a simple multiplication function to test using lists and pairs as arguments to functions. I also slapped on a lambda expression to do the actual multiplication. It's far from perfect of course, so maybe I'll improve it later. I'd like to learn more about memory management first, though.
+
+I also moved some code around, specifically the logging functions. They are better fit in 'Log.h' and 'Log.cpp', so that I can reuse them later should I require logging from new files.
