@@ -2,22 +2,40 @@
 #include <sstream>
 #include <cmath>
 #include <random>
+#include <list>
 #include "Log.h"
 
 static void ConvertBetweenFahrenheitAndCelsius();
 static void CalculateAreaOfCircle();
 static void SimulateDiceRoll(int numberOfThrows);
+static void Multiplication(const std::list<std::pair<int, int>>& listOfNumbers);
 
 int main()
 {
 	InitialLog();
 
-	ConvertBetweenFahrenheitAndCelsius();
+	//ConvertBetweenFahrenheitAndCelsius();
 	//CalculateAreaOfCircle();
 	//SimulateDiceRoll(10);
+	Multiplication({
+		{10, 10},
+		{20, 20},
+		{5, 9},
+		});
 	
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n').get();
 	return 0;
+}
+
+static void SaveLogToBuffer(const std::string& message, std::ostringstream& buffer)
+{
+	buffer << message << std::endl;
+}
+
+static void LogBuffer(std::ostringstream& buffer)
+{
+	std::cout << buffer.str();
+	buffer.str("");
 }
 
 static void ConvertBetweenFahrenheitAndCelsius()
@@ -86,4 +104,19 @@ static void SimulateDiceRoll(int numberOfThrows)
 
 		std::cout << "Throw nr " << i << " lands: " << randomNumber << std::endl;
 	}
+}
+
+static void Multiplication(const std::list<std::pair<int, int>>& listOfNumbers)
+{
+	std::ostringstream buffer;
+
+	auto multiplyPairOfNumbers = [](int a, int b) -> int { return a * b; };
+
+	for (auto it = listOfNumbers.begin(); it != listOfNumbers.end(); it++)
+	{
+		std::pair<int, int> pairOfNumbers = *it;
+
+		SaveLogToBuffer(std::to_string(multiplyPairOfNumbers(pairOfNumbers.first, pairOfNumbers.second)), buffer);
+	}
+	LogBuffer(buffer);
 }
