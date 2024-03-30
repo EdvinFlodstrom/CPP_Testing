@@ -24,18 +24,6 @@ int main()
 		});
 	
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n').get();
-	return 0;
-}
-
-static void SaveLogToBuffer(const std::string& message, std::ostringstream& buffer)
-{
-	buffer << message << std::endl;
-}
-
-static void LogBuffer(std::ostringstream& buffer)
-{
-	std::cout << buffer.str();
-	buffer.str("");
 }
 
 static void ConvertBetweenFahrenheitAndCelsius()
