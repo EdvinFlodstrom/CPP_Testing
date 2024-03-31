@@ -4,11 +4,13 @@
 #include <random>
 #include <list>
 #include "Log.h"
+#include "DiceHolder.h"
 
 static void ConvertBetweenFahrenheitAndCelsius();
 static void CalculateAreaOfCircle();
 static void SimulateDiceRoll(int numberOfThrows);
 static void Multiplication(const std::list<std::pair<int, int>>& listOfNumbers);
+static void CreateAndThrowDices(int numberOfDicesToCreate);
 
 int main()
 {
@@ -17,11 +19,12 @@ int main()
 	//ConvertBetweenFahrenheitAndCelsius();
 	//CalculateAreaOfCircle();
 	//SimulateDiceRoll(10);
-	Multiplication({
+	/*Multiplication({
 		{10, 10},
 		{20, 20},
 		{5, 9},
-		});
+		});*/
+	CreateAndThrowDices(5);
 	
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n').get();
 }
@@ -105,6 +108,38 @@ static void Multiplication(const std::list<std::pair<int, int>>& listOfNumbers)
 		std::pair<int, int> pairOfNumbers = *it;
 
 		SaveLogToBuffer(std::to_string(multiplyPairOfNumbers(pairOfNumbers.first, pairOfNumbers.second)), buffer);
+	}
+	LogBuffer(buffer);
+}
+
+static void CreateAndThrowDices(int numberOfDicesToCreate)
+{
+	std::ostringstream buffer;
+	std::list<DiceHolder> listOfDices;
+	std::vector<int> numberOfSidesOnEachDice;	
+	numberOfSidesOnEachDice.reserve(numberOfDicesToCreate);
+
+	std::cout << "Now, please enter the number of sides of each dice." << std::endl;
+
+	for (int i = 1; i <= numberOfDicesToCreate; i++)
+	{
+		int numberOfSides;
+		std::cout << "Dice " + std::to_string(i) << ": ", std::cin >> numberOfSides;
+		numberOfSidesOnEachDice.push_back(numberOfSides);
+	}	
+
+	for (int i = 1; i <= numberOfDicesToCreate; i++)
+	{
+		listOfDices.push_back(DiceHolder(numberOfSidesOnEachDice[i - 1]));
+	}
+	
+	SaveLogToBuffer(DiceHolder::LogNumberOfDices(), buffer);
+	SaveLogToBuffer("The result of each dice throw is as follows...", buffer);
+	for (auto it = listOfDices.begin(); it != listOfDices.end(); it++)
+	{
+		DiceHolder dice = *it;
+
+		SaveLogToBuffer(std::to_string(dice.ThrowDice()), buffer);
 	}
 	LogBuffer(buffer);
 }
