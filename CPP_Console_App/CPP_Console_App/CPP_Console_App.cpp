@@ -5,12 +5,14 @@
 #include <list>
 #include "Log.h"
 #include "DiceHolder.h"
+#include "SubClass.h"
 
 static void ConvertBetweenFahrenheitAndCelsius();
 static void CalculateAreaOfCircle();
 static void SimulateDiceRoll(int numberOfThrows);
 static void Multiplication(const std::list<std::pair<int, int>>& listOfNumbers);
 static void CreateAndThrowDices(int numberOfDicesToCreate);
+static void LogInheritors();
 
 int main()
 {
@@ -24,7 +26,8 @@ int main()
 		{20, 20},
 		{5, 9},
 		});*/
-	CreateAndThrowDices(5);
+	//CreateAndThrowDices(5);
+	LogInheritors();
 	
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n').get();
 }
@@ -141,5 +144,17 @@ static void CreateAndThrowDices(int numberOfDicesToCreate)
 
 		SaveLogToBuffer(std::to_string(dice.ThrowDice()), buffer);
 	}
+	LogBuffer(buffer);
+}
+
+static void LogInheritors()
+{
+	std::ostringstream buffer;
+	SubClass subClass("Rolf");
+	SubClass subClass2("Torsten");
+
+	SaveLogToBuffer("The name of the inheritors is as follows... ", buffer);
+	SaveLogToBuffer(subClass.GetName(), buffer);
+	SaveLogToBuffer(subClass2.GetName(), buffer);
 	LogBuffer(buffer);
 }
