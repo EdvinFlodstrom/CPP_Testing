@@ -46,3 +46,7 @@ I was messing around today, a bit too much perhaps? I got some really dumb ideas
 2024-04-12
 -----------
 Events spiraled out of control last time, leading to a new project being created. And I've actually completed a small program this time. So it's a program that clicks. Fast. Really fast. *Really, really* fast. Like a solid four hundred clicks a second, at times. Why? Because I thought it would be a fun way to interact with hardware at a level I've never tried before. I'll say, although this project was a little odd, that it was a success.
+
+2024-04-16
+-----------
+Yeah so the above idea was a tad mad, so to say. So today I adjusted the program a little. To be even more efficient... Which means more clicks per second. Not a very good idea in hindsight. My computer crashed a solid four times. You'd think I'd learn after the first two, but I guess not. It's probably not a good idea to try to simulate clicks at a rate faster than the operating system/computer can handle. Cause that's what the changes achieved - the program was clicking so fast that Windows simply couldn't handle it. The clicks were added to some buffer, which caused me to lose any form of control over the computer, save for ctrl + alt + delete. I literally couldn't stop the program - it was in control. So I had to restart. Four times. Then I decided it's probably time to relax and I slowed it down, a lot. Now, it clicks 'only' 100 times per second. I think it runs rather well now, it didn't crash anyway.
