@@ -3,29 +3,24 @@
 #include <atomic>
 
 std::atomic<bool> exitProgram{ false };
-std::atomic<bool> enableCheckingOfKeys{ false };
 std::atomic<bool> clicking{ false };
 
 static void SimulateLeftClick()
 {
-	while (!exitProgram)
+	while (clicking)
 	{
-		if (clicking)
+		for (int i = 0; i < 10; i++)
 		{
 			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
 			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 		}
-		else
-		{
-			Sleep(1000);
-		}
-		std::this_thread::yield();
+		Sleep(100);
 	}
 }
 
 int main()
 {
-	std::thread clickThread(SimulateLeftClick);
+	std::thread clickThread;
 
 	while (!exitProgram)
 	{
@@ -33,12 +28,20 @@ int main()
 			exitProgram = true;
 
 		if (GetAsyncKeyState('X') & 0x8000)
-			clicking = true;
-
-		else if (GetAsyncKeyState('Z') & 0x8000)
-			clicking = false;
-
-		Sleep(250);
+		{
+			if (clicking)
+			{
+				clicking = false;
+				if (clickThread.joinable())
+					clickThread.join();
+			}
+			else
+			{
+				clicking = true;
+				clickThread = std::thread(SimulateLeftClick);
+			}
+		}
+		Sleep(500);
 	}
 
 	if (clickThread.joinable())
