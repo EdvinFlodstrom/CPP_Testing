@@ -27,7 +27,7 @@ int main()
 
     while (true)
     {
-        if (GetAsyncKeyState(VK_RETURN) & 0x8000)
+        if (GetAsyncKeyState(VK_UP) & 0x8000) // Up arrow inputs enter click location saving mode
         {
             if (!savingClicks)
             {
@@ -40,19 +40,19 @@ int main()
 
                 while (true)
                 {
-                    if (GetAsyncKeyState(0x02) & 0x8000) // Right clicks save a left click at the cursor's current position.
+                    if (GetAsyncKeyState(VK_RIGHT) & 0x8000) // Right arrow inputs save a left click at the cursor's current position.
                     {
                         Sleep(200);
                         positionOfSavedClicks.push_back(GetCursorPosition());
                     }
 
-                    Sleep(75);
-
-                    if (GetAsyncKeyState(VK_RETURN) & 0x8000)
+                    if (GetAsyncKeyState(VK_LEFT) & 0x8000) // Left arrow inputs exit click location saving mode
                     {
                         SetCursorPos(200, 200);
                         break;
                     }
+
+                    Sleep(75);
                 }
             }
             else
@@ -64,12 +64,12 @@ int main()
                 for (const auto& element : positionOfSavedClicks) // For each saved position, simulate a left click.
                 {
                     ClickAtGivenPosition(element);
-                    Sleep(10);
+                    Sleep(5);
                 }
             }
         }
 
-        if (GetAsyncKeyState(VK_ESCAPE) & 0x8000)
+        if (GetAsyncKeyState(VK_DOWN) & 0x8000) // Down arrow inputs exit the program
             break;
 
         Sleep(125);
