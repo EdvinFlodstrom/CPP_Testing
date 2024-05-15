@@ -61,3 +61,7 @@ Now, I've completed a small new project. More sophisticated than the above, I da
 ## 2024-05-14
 
 Been a while since last time, hm. So, today I was unsure of what to do, so I thought to write a small C++ program with some basic file interaction. So thats what I did, and it's indeed very basic. One can write to a file, and either reset all its contents or keep them when starting the program. Nothing massive or insanely fancy, but that's because I never intended for it to be a big thingamajig. Just a small project to learn some about file interaction. I might use this knowledge later on, we'll see.
+
+## 2024-05-15
+
+So, today I decided to do some more C++. I did not apply the file related knowledge from above, rather, I decided to do something dumb and useless. So, I wrote a program that, every 0.2-0.75 seconds, moves the cursor a bit. This makes it near impossible to accomplish literally anything, since as soon as one tries to click somewhere, the cursor has almost certainly moved away. Why did I make this? Because I though it would be fun. Was it fun? Oh yeah, it was. My condolences for whoever accidentally starts the program and doesn't know how to stop it, though (as if that would ever happen, heh).
