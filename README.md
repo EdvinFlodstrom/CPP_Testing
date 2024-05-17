@@ -65,3 +65,7 @@ Been a while since last time, hm. So, today I was unsure of what to do, so I tho
 ## 2024-05-15
 
 So, today I decided to do some more C++. I did not apply the file related knowledge from above, rather, I decided to do something dumb and useless. So, I wrote a program that, every 0.2-0.75 seconds, moves the cursor a bit. This makes it near impossible to accomplish literally anything, since as soon as one tries to click somewhere, the cursor has almost certainly moved away. Why did I make this? Because I though it would be fun. Was it fun? Oh yeah, it was. My condolences for whoever accidentally starts the program and doesn't know how to stop it, though (as if that would ever happen, heh).
+
+## 2024-05-17
+
+Alright, I spent a bit of time today working on small projects in C++. One was another annoying mouse-related program. It moves the mouse as soon as you left click. Wouldn't want anyone to stumble upon that one, either. And I wrote another program as well, that takes a message and simulates the keyboard presses required to write that message. This one was more difficult, but also cooler, I should think. And it actually works, so that's cool.
