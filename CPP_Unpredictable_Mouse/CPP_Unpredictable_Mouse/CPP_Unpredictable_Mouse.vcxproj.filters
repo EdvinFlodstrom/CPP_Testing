@@ -42,7 +42,7 @@
     <ClCompile Include="Cursor\CursorInteraction.cpp">
       <Filter>Resource Files\Cursor</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Logic.cpp">
+    <ClCompile Include="Logic\MouseLogic.cpp">
       <Filter>Resource Files\Logic</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,7 +53,7 @@
     <ClInclude Include="Cursor\CursorInteraction.h">
       <Filter>Header Files\Cursor</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Logic.h">
+    <ClInclude Include="Logic\MouseLogic.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
   </ItemGroup>

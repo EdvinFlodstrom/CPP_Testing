@@ -1,6 +1,7 @@
-#include "Logic/Logic.h"
+#include "Logic/MouseLogic.h"
 
 int main()
 {
-	return MoveMouseUnpredictably();
+	//return MoveMouseUnpredictably();
+	return MoveMouseOnClick();
 }
