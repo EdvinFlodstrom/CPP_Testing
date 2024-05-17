@@ -2,9 +2,9 @@
 #include "CursorInteraction.h"
 #include "../Random/Random.h"
 
-void AdjustCursorPosition(std::pair<int, int> position)
+void AdjustCursorPosition(std::pair<int, int> position, int minRandomNumber, int maxRandomNumber)
 {
-	std::vector<int> randomValues = GetRandomValues(-400, 400, 2);
+	std::vector<int> randomValues = GetRandomValues(minRandomNumber, maxRandomNumber, 2);
 
 	if (randomValues.size() != 2)
 	{

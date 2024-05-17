@@ -25,6 +25,12 @@
     <Filter Include="Resource Files\Cursor">
       <UniqueIdentifier>{a04496b7-da27-4f0e-a5b9-69cc359eb25f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Logic">
+      <UniqueIdentifier>{8c7c5615-d308-4214-a068-f90ca0cdcc3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logic">
+      <UniqueIdentifier>{7ccd6227-0bb9-4771-990b-02deec13349c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPP_Unpredictable_Mouse.cpp">
@@ -36,6 +42,9 @@
     <ClCompile Include="Cursor\CursorInteraction.cpp">
       <Filter>Resource Files\Cursor</Filter>
     </ClCompile>
+    <ClCompile Include="Logic\Logic.cpp">
+      <Filter>Resource Files\Logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random\Random.h">
@@ -43,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="Cursor\CursorInteraction.h">
       <Filter>Header Files\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Logic.h">
+      <Filter>Header Files\Logic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

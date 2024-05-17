@@ -2,7 +2,7 @@
 
 #include <vector>
 
-void AdjustCursorPosition(std::pair<int, int> position);
+void AdjustCursorPosition(std::pair<int, int> position, int minRandomNumber, int maxRandomNumber);
 
 std::pair<int, int> GetCursorPosition();
 
