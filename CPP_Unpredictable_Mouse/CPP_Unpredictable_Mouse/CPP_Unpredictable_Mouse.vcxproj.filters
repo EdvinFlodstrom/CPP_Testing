@@ -45,6 +45,9 @@
     <ClCompile Include="Logic\MouseLogic.cpp">
       <Filter>Resource Files\Logic</Filter>
     </ClCompile>
+    <ClCompile Include="Logic\KeyboardLogic.cpp">
+      <Filter>Resource Files\Logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random\Random.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files\Cursor</Filter>
     </ClInclude>
     <ClInclude Include="Logic\MouseLogic.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\KeyboardLogic.h">
       <Filter>Header Files\Logic</Filter>
     </ClInclude>
   </ItemGroup>

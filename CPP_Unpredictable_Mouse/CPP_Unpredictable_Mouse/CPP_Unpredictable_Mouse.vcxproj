@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="CPP_Unpredictable_Mouse.cpp" />
     <ClCompile Include="Cursor\CursorInteraction.cpp" />
+    <ClCompile Include="Logic\KeyboardLogic.cpp" />
     <ClCompile Include="Logic\MouseLogic.cpp" />
     <ClCompile Include="Random\Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cursor\CursorInteraction.h" />
+    <ClInclude Include="Logic\KeyboardLogic.h" />
     <ClInclude Include="Logic\MouseLogic.h" />
     <ClInclude Include="Random\Random.h" />
   </ItemGroup>
