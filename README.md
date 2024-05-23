@@ -69,3 +69,7 @@ So, today I decided to do some more C++. I did not apply the file related knowle
 ## 2024-05-17
 
 Alright, I spent a bit of time today working on small projects in C++. One was another annoying mouse-related program. It moves the mouse as soon as you left click. Wouldn't want anyone to stumble upon that one, either. And I wrote another program as well, that takes a message and simulates the keyboard presses required to write that message. This one was more difficult, but also cooler, I should think. And it actually works, so that's cool.
+
+## 2024-05-23
+
+Hm. So, with a lack of better ideas, I decided to try writing a small and relatively simple C++ program. It's a console application where you can create a bank account with a name, balance, and some other stuff. I'm not done yet, but it's what I've been working on for a bit today.
