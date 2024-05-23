@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bank\BankAccount.cpp" />
+    <ClCompile Include="Bank\BankInteraction.cpp" />
     <ClCompile Include="CPP_Console_Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bank\BankAccount.h" />
+    <ClInclude Include="Bank\BankInteraction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

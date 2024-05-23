@@ -13,10 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Bank">
+      <UniqueIdentifier>{fe1bbe3c-f99f-4ff8-8ea8-76858ce9b134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Bank">
+      <UniqueIdentifier>{53929bb7-496c-4ddc-b976-78f6eeae73ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPP_Console_Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Bank\BankAccount.cpp">
+      <Filter>Resource Files\Bank</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank\BankInteraction.cpp">
+      <Filter>Resource Files\Bank</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bank\BankAccount.h">
+      <Filter>Header Files\Bank</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank\BankInteraction.h">
+      <Filter>Header Files\Bank</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
