@@ -8,7 +8,7 @@
 int CURRENT_ACCOUNT_NUMBER = 1;
 int const INITIAL_BALANCE = 500;
 
-int convertStringToInt(std::string numberAsString) {
+static int convertStringToInt(std::string numberAsString) {
 	try {
 		return std::stoi(numberAsString);
 	}
@@ -48,7 +48,7 @@ static BankAccount* getBankAccountConsoleInput(std::vector<BankAccount*>& bankAc
 	return bankAccount;
 }
 
-void depositOrWithdrawMoney(BankAccount& bankAccount, bool deposit) {
+static void depositOrWithdrawMoney(BankAccount& bankAccount, bool deposit) {
 	double amount;
 	std::string stringAmount;
 

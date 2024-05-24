@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 
-extern const std::string BAD_DEPOSIT_AMOUNT_STRING;
-extern const std::string BAD_WITHDRAW_AMOUNT_STRING;
+constexpr const char* BAD_DEPOSIT_AMOUNT_STRING = "The requested amount may not be 0 or below.\n";
+constexpr const char* BAD_WITHDRAW_AMOUNT_STRING = "You may not withdraw more money than you have in your bank.\n";
 
 class BankAccount
 {
