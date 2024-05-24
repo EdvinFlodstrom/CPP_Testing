@@ -73,3 +73,16 @@ Alright, I spent a bit of time today working on small projects in C++. One was a
 ## 2024-05-23
 
 Hm. So, with a lack of better ideas, I decided to try writing a small and relatively simple C++ program. It's a console application where you can create a bank account with a name, balance, and some other stuff. I'm not done yet, but it's what I've been working on for a bit today.
+
+## 2024-05-24
+
+The input buffer is... troublesome. I'm struggling to deal with it properly, because of leftover newline characters. I'm trying to find a proper way to clear it, to make the program consistent, but it's not as easy as it might sound.
+
+Alright! I think the problem above should be solved now. Apparently, it's not a great idea to combine `std::cin` and `_getch()`, as this appears to lead to inconsistensies regarding `std::cin.ignore()`, which is what I'm using to clear the input buffer.
+
+Hmkay. I think the program is done, now. It was technically done five minues ago, but I realized I could combine a lot of the logic from two parts (deposit/withdraw money) into one function. So I did that, making the code a tad cleaner. I've tested most cases I can think of, and the program seems to be running alright. I used the following links for help:
+
+-   https://stackoverflow.com/questions/7663709/how-can-i-convert-a-stdstring-to-int
+-   https://stackoverflow.com/questions/257091/how-do-i-flush-the-cin-buffer
+-   https://www.delftstack.com/howto/cpp/clear-input-buffer-in-cpp/
+-   https://stackoverflow.com/questions/14116003/whats-the-difference-between-constexpr-and-const
