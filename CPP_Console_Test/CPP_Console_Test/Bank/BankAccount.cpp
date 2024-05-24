@@ -21,7 +21,7 @@ std::string BankAccount::displayDetails() const {
 	oss << "Account details are as follow.\n"
 		<< "Account number: " << accountNumber << "\n"
 		<< "Account holder name: " << accountHolderName << "\n" // Round to one decimal.
-		<< "Balance: " << std::fixed << std::setprecision(1) << roundedBalance << "\n";
+		<< "Balance: $" << std::fixed << std::setprecision(1) << roundedBalance << "\n";
 
 	return oss.str();
 }
@@ -34,7 +34,7 @@ std::string BankAccount::deposit(double amount) {
 
 	std::ostringstream oss;
 	oss << "You successfully deposited " << amount << ". \n"
-		<< "Your new balance is: " << balance << "\n";
+		<< "Your new balance is: $" << balance << "\n";
 
 	return oss.str();
 }
@@ -50,7 +50,7 @@ std::string BankAccount::withdraw(double amount) {
 
 	std::ostringstream oss;
 	oss << "You successfully withdrew " << amount << ". \n"
-		<< "Your new balance is: " << balance << "\n";
+		<< "Your new balance is: $" << balance << "\n";
 
 	return oss.str();
 }
