@@ -6,7 +6,6 @@
 #include <conio.h>
 
 int CURRENT_ACCOUNT_NUMBER = 1;
-int const INITIAL_BALANCE = 500;
 
 static int convertStringToInt(std::string numberAsString) {
 	try {

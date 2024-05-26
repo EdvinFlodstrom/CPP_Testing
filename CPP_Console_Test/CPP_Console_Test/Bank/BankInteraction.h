@@ -4,6 +4,6 @@
 #include <vector>
 
 extern int CURRENT_ACCOUNT_NUMBER;
-extern int const INITIAL_BALANCE;
+constexpr int const INITIAL_BALANCE = 500;
 
 int bankInteraction();
